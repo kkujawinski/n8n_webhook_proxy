@@ -1,0 +1,17 @@
+name = "n8n-webhook-proxy"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables
+# Set these in the Cloudflare dashboard or via wrangler secrets
+[vars]
+# TARGET_DOMAIN = "https://your-target-domain.com"
+# REMOVE_HEADERS = "x-forwarded-for,x-real-ip,authorization"
+
+# Example environment configuration
+# Uncomment and modify as needed
+# [env.production]
+# vars = { TARGET_DOMAIN = "https://your-production-domain.com" }
+
+# [env.staging]  
+# vars = { TARGET_DOMAIN = "https://your-staging-domain.com" }
