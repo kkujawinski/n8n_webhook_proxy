@@ -65,6 +65,14 @@ export default {
           redirect: 'manual'
         });
 
+        console.log('Modified Request:', {
+          url: finalRequest.url,
+          method: finalRequest.method,
+          headers: Object.fromEntries(finalRequest.headers.entries()),
+          timestamp: new Date().toISOString(),
+          path: finalRequest.pathname
+        });
+
         // Make the proxied request
         const response = await fetch(finalRequest);
         
