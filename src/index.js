@@ -86,6 +86,14 @@ export default {
           timestamp: new Date().toISOString()
         });
 
+        // return fake response
+        return new Response('Fake response', {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/plain'
+          }
+        });
+
         // Return the response
         return new Response(response.body, {
           status: response.status,
