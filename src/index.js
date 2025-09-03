@@ -44,7 +44,9 @@ export default {
         // Create new headers object without the specified headers
         const newHeaders = new Headers();
         for (const [key, value] of modifiedRequest.headers.entries()) {
+          console.log('Header:', key, value);
           if (!headersToRemove.includes(key.toLowerCase())) {
+            console.log('Setting header:', key, value);
             newHeaders.set(key, value);
           }
         }
